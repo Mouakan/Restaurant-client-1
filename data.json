@@ -24,7 +24,7 @@
     "_comment": "Choisir 'video' ou 'image' pour le type de hero",
     "type": "video",
     "image": "",
-    "video": "videos/intro.mp4",
+    "video": "intro.mp4",
     "videoPoster": ""
   },
 
