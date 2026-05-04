@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===================================================
+       SEO : ces balises sont remplies automatiquement
+       depuis data.json > seo. Ne pas modifier ici.
+       =================================================== -->
+  <title id="page-title">Chargement...</title>
+  <meta name="description" id="meta-description" content="" />
+  <meta name="theme-color" id="meta-theme" content="#c8a96e" />
+
+  <!-- Open Graph (réseaux sociaux) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" id="og-title" content="" />
+  <meta property="og:description" id="og-desc" content="" />
+  <meta property="og:image" id="og-image" content="" />
+
+  <!-- Polices Google Fonts — premium, distinctives -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION — Logo + liens dynamiques
+       Le nom du restaurant est injecté depuis data.json
+       ============================================================ -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#accueil" class="nav__logo" id="nav-logo">—</a>
+      <button class="nav__burger" id="nav-burger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#menu" class="nav__link">Menu</a></li>
+        <li><a href="#galerie" class="nav__link">Galerie</a></li>
+        <li><a href="#infos" class="nav__link">Infos</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Réserver</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO — Image ou vidéo selon data.json > hero.type
+       ============================================================ -->
+  <section class="hero" id="accueil">
+    <!-- Conteneur rempli par script.js selon hero.type -->
+    <div class="hero__media" id="hero-media"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__label" id="hero-label">Restaurant</p>
+      <h1 class="hero__title" id="hero-title">—</h1>
+      <p class="hero__tagline" id="hero-tagline">—</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">Découvrir le menu</a>
+        <a href="#contact" class="btn btn--ghost">Réserver une table</a>
+      </div>
+    </div>
+    <a href="#menu" class="hero__scroll" aria-label="Défiler vers le bas">
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       SECTION INTRO — Texte de présentation
+       ============================================================ -->
+  <section class="intro reveal" id="intro">
+    <div class="container">
+      <div class="intro__inner">
+        <span class="section-label">Notre histoire</span>
+        <p class="intro__text" id="intro-text">—</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION MENU — Généré dynamiquement depuis data.json > menu
+       Les onglets de catégories sont créés automatiquement.
+       ============================================================ -->
+  <section class="menu-section reveal" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">À la carte</span>
+        <h2 class="section-title">Notre Menu</h2>
+      </div>
+      <!-- Les onglets de catégories seront injectés ici -->
+      <div class="menu__tabs" id="menu-tabs" role="tablist"></div>
+      <!-- Les plats seront injectés ici -->
+      <div class="menu__grid" id="menu-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION GALERIE — Photos depuis data.json > galerie.photos
+       ============================================================ -->
+  <section class="galerie reveal" id="galerie">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Ambiance</span>
+        <h2 class="section-title">La Galerie</h2>
+      </div>
+    </div>
+    <!-- Grille pleine largeur, hors container -->
+    <div class="galerie__grid" id="galerie-grid"></div>
+  </section>
+
+  <!-- ============================================================
+       LIGHTBOX — Modal photo galerie
+       ============================================================ -->
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Photo agrandie">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Fermer">✕</button>
+    <button class="lightbox__prev" id="lightbox-prev" aria-label="Photo précédente">‹</button>
+    <button class="lightbox__next" id="lightbox-next" aria-label="Photo suivante">›</button>
+    <div class="lightbox__img-wrap">
+      <img src="" alt="Photo galerie" id="lightbox-img" />
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION INFOS — Horaires + adresse depuis data.json
+       ============================================================ -->
+  <section class="infos reveal" id="infos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Pratique</span>
+        <h2 class="section-title">Nous trouver</h2>
+      </div>
+      <div class="infos__grid">
+
+        <!-- Horaires -->
+        <div class="infos__block">
+          <h3 class="infos__subtitle">Horaires</h3>
+          <ul class="horaires" id="horaires-list"></ul>
+        </div>
+
+        <!-- Adresse -->
+        <div class="infos__block">
+          <h3 class="infos__subtitle">Adresse</h3>
+          <address class="infos__adresse" id="adresse-block"></address>
+          <a class="infos__map-link" id="map-link" href="#" target="_blank" rel="noopener">
+            Voir sur Google Maps →
+          </a>
+        </div>
+
+        <!-- Contact rapide -->
+        <div class="infos__block">
+          <h3 class="infos__subtitle">Contact</h3>
+          <p><a class="infos__tel" id="tel-link" href="#">—</a></p>
+          <p><a class="infos__email" id="email-link" href="#">—</a></p>
+          <!-- Réseaux sociaux -->
+          <div class="infos__social" id="social-links"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION CONTACT / RÉSERVATION
+       Formulaire statique — Compatible Netlify Forms (ajout de
+       data-netlify="true" sur le form si déployé sur Netlify)
+       ============================================================ -->
+  <section class="contact reveal" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Réservation</span>
+        <h2 class="section-title">Une table ?</h2>
+      </div>
+      <form
+        class="contact__form"
+        id="reservation-form"
+        name="reservation"
+        method="POST"
+        data-netlify="true"
+        novalidate
+      >
+        <!-- Champ caché pour Netlify -->
+        <input type="hidden" name="form-name" value="reservation" />
+
+        <div class="form__row">
+          <div class="form__group">
+            <label for="f-nom">Nom complet</label>
+            <input type="text" id="f-nom" name="nom" placeholder="Jean Dupont" required />
+          </div>
+          <div class="form__group">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" placeholder="jean@email.com" required />
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="f-date">Date</label>
+            <input type="date" id="f-date" name="date" required />
+          </div>
+          <div class="form__group">
+            <label for="f-heure">Heure</label>
+            <input type="time" id="f-heure" name="heure" required />
+          </div>
+          <div class="form__group">
+            <label for="f-couverts">Couverts</label>
+            <select id="f-couverts" name="couverts">
+              <option>1</option><option>2</option><option>3</option>
+              <option>4</option><option>5</option><option>6+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__group">
+          <label for="f-message">Message (optionnel)</label>
+          <textarea id="f-message" name="message" rows="4" placeholder="Allergie, occasion spéciale…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">
+          Envoyer la demande
+        </button>
+        <p class="form__success" id="form-success">
+          ✓ Votre demande a été envoyée. Nous vous confirmerons par email.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER — Données depuis data.json
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__name" id="footer-name">—</p>
+        <p class="footer__adresse" id="footer-adresse">—</p>
+        <p class="footer__copy">
+          © <span id="footer-year"></span>
+          <span id="footer-copy-name">—</span>.
+          Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script principal — ne pas modifier -->
+  <script src="script.js"></script>
+
+</body>
+</html>

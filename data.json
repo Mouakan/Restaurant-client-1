@@ -1,0 +1,138 @@
+{
+  "_comment": "=== FICHIER DE CONFIGURATION CLIENT ===",
+  "_instruction": "Modifiez UNIQUEMENT ce fichier pour changer de client. Ne touchez pas aux autres fichiers.",
+
+  "restaurant": {
+    "nom": "Maison Aurore",
+    "tagline": "Cuisine du terroir réinventée",
+    "description": "Au cœur de Paris, Maison Aurore sublime les produits locaux avec une approche contemporaine. Chaque assiette est une invitation au voyage sensoriel, entre tradition et modernité.",
+    "telephone": "+33 1 42 00 00 00",
+    "email": "contact@maisonaurore.fr",
+    "adresse": {
+      "rue": "12 rue des Martyrs",
+      "ville": "Paris",
+      "codePostal": "75009",
+      "pays": "France"
+    },
+    "reseauxSociaux": {
+      "instagram": "https://instagram.com/maisonaurore",
+      "facebook": "https://facebook.com/maisonaurore"
+    }
+  },
+
+  "hero": {
+    "_comment": "Choisir 'video' ou 'image' pour le type de hero",
+    "type": "video",
+    "image": "",
+    "video": "videos/intro.mp4",
+    "videoPoster": ""
+  },
+
+  "horaires": [
+    { "jour": "Lundi",    "ouverture": "12h00", "fermeture": "14h30", "ferme": false },
+    { "jour": "Mardi",    "ouverture": "12h00", "fermeture": "14h30", "ferme": false },
+    { "jour": "Mercredi", "ouverture": "12h00", "fermeture": "14h30", "ferme": false },
+    { "jour": "Jeudi",    "ouverture": "12h00", "fermeture": "14h30", "ferme": false },
+    { "jour": "Vendredi", "ouverture": "12h00", "fermeture": "14h30", "ferme": false },
+    { "jour": "Samedi",   "ouverture": "19h00", "fermeture": "22h30", "ferme": false },
+    { "jour": "Dimanche", "ouverture": "",      "fermeture": "",      "ferme": true  }
+  ],
+
+  "menu": {
+    "_comment": "Ajoutez/supprimez des catégories et des plats librement",
+    "categories": [
+      {
+        "nom": "Entrées",
+        "plats": [
+          {
+            "nom": "Foie Gras Maison",
+            "description": "Terrine maison, chutney de figues, brioche toastée",
+            "prix": "18",
+            "tag": "Signature",
+            "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80"
+          },
+          {
+            "nom": "Velouté de Châtaigne",
+            "description": "Crème de châtaigne, lardons fumés, huile de truffe",
+            "prix": "12",
+            "tag": "Saison",
+            "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80"
+          },
+          {
+            "nom": "Carpaccio de Saint-Jacques",
+            "description": "Saint-Jacques fines, citron vert, caviar d'Aquitaine",
+            "prix": "22",
+            "tag": "",
+            "image": "https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=400&q=80"
+          }
+        ]
+      },
+      {
+        "nom": "Plats",
+        "plats": [
+          {
+            "nom": "Canard à l'Orange",
+            "description": "Magret fumé, sauce grand-mère, purée de panais",
+            "prix": "28",
+            "tag": "Signature",
+            "image": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=400&q=80"
+          },
+          {
+            "nom": "Filet de Bœuf Rossini",
+            "description": "Bœuf Charolais, foie gras poêlé, jus truffe",
+            "prix": "38",
+            "tag": "Premium",
+            "image": "https://images.unsplash.com/photo-1558030006-450675393462?w=400&q=80"
+          },
+          {
+            "nom": "Sole Meunière",
+            "description": "Sole de ligne, beurre noisette, câpres, citron confit",
+            "prix": "32",
+            "tag": "",
+            "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80"
+          }
+        ]
+      },
+      {
+        "nom": "Desserts",
+        "plats": [
+          {
+            "nom": "Soufflé au Chocolat",
+            "description": "Valrhona 70%, glace vanille Bourbon",
+            "prix": "14",
+            "tag": "Signature",
+            "image": "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?w=400&q=80"
+          },
+          {
+            "nom": "Tarte Tatin",
+            "description": "Pommes caramélisées, crème fraîche normande",
+            "prix": "10",
+            "tag": "",
+            "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80"
+          }
+        ]
+      }
+    ]
+  },
+
+  "galerie": {
+    "_comment": "Ajoutez les URLs de vos photos. Minimum recommandé: 6 photos.",
+    "photos": [
+      "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&q=80",
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
+      "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80",
+      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80",
+      "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+    ]
+  },
+
+  "seo": {
+    "_comment": "Personnalisez pour le référencement Google",
+    "titre": "Maison Aurore — Restaurant Gastronomique Paris 9ème",
+    "description": "Restaurant gastronomique au cœur de Paris. Cuisine du terroir réinventée, produits locaux et de saison.",
+    "couleurTheme": "#c8a96e"
+  }
+}
